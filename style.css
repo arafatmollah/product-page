@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
 body{
-    margin: 0;
-    padding: 0;
     background-color: #EEEEEE;
     font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
 color: #1b1b32;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 img{
    width: 100%; 
@@ -26,18 +27,22 @@ a{
 li{
     list-style: none;
 }
+
 .nav-list{
     display: flex;
     justify-content: right;
+}
+@media (max-width:800px){
+    .nav-list{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 .email{
     text-align: center;
     padding: 15px;
 }
-#mail{
-    padding: 5px 20px;
-    border: none;
-}
+
 .btn{
     background-color: rgb(170, 170, 11);
     border: none;
@@ -78,19 +83,21 @@ p{
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-#video{
     max-width: 100%;
 }
+#works>iframe{
+    max-width: 500px;
+    width: 100%;
+}
 @media (max-width:800px){
-    #works{
-        max-width: fit-content;
+    #works>iframe{
+        max-width: 200px;
+        width: 100%;
     }
 }
 #pricing{
     max-width: 100%;
+    min-height: fit-content;
     display: flex;
     justify-content: center;
 }
@@ -103,5 +110,31 @@ p{
     border: 1px solid black;
     margin: 30px;
     text-align: center;
-    padding: 20px;
+    padding: 5px 60px;
+    max-width: 100%;
+}
+
+button{
+    border: none;
+    background-color: #F1C40F;
+    font-size: 16px;
+    margin: 10px;
+    padding: 5px 10px;
+
+}
+.border-head{
+    background-color: #DDDDDD;
+    border-bottom: 1px solid black;
+}
+.footer{
+    text-align: right;
+    background-color: #d8c3c3;
+    height: 100px;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 15px;
+    max-width: 100%;
+}
+.footer a{
+    font-size: 16px;
 }
